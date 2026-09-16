@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Desarrolladora Java Junior</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. INICIO / HEADER -->
+    <header id="inicio">
+        <nav>
+            <div class="logo">MiPortafolio</div>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+             <img src="assets/mi-foto.png" alt="Foto de perfil" class="foto-perfil">
+            <h1>¡Hola! Soy <span class="destacado">Catherine</span> 👋</h1>
+            <p>Desarrolladora <strong>Java Full Stack en formación.</strong></p>
+            <a href="#proyectos" class="btn">Ver mis proyectos</a>
+        </div>
+    </header>
+
+    <!-- 2. SOBRE MÍ -->
+    <section id="sobre-mi" class="contenedor">
+        <h2>Sobre Mí</h2>
+        
+        <p class="biografia">
+           Actualmente me encuentro sumergida en un exigente Bootcamp Full Stack Java,
+           perfeccionando mis habilidades técnicas para crear aplicaciones robustas y
+           escalables. Mi formación previa en Ingeniería Industrial me dio una base 
+           sólida en lógica y optimización de procesos, herramientas que hoy aplico 
+           directamente al escribir código limpio y eficiente.
+           <br><br>
+           Tras una pausa laboral de 7 años dedicada con orgullo a la crianza de mis hijos
+            y la gestión del hogar una etapa que consolidó mi resiliencia y mi capacidad de
+            organización multitarea, vuelvo al ámbito profesional con la programación como
+            mi gran motor. Busco mi primera oportunidad laboral en tecnología para aportar
+            madurez,adaptabilidad y pasión por el desarrollo de software.
+        </p>
+
+        <h3>Mis Herramientas Técnicas</h3>
+        <ul class="skills">
+            <li>Java (POO)</li>
+            <li>Bases de Datos (SQL)</li>
+            <li>HTML5 & CSS3</li>
+            <li>Git & GitHub</li>
+        </ul>
+    </section>
+
+    <!-- 3. PROYECTOS (Mínimo 3) -->
+    <section id="proyectos" class="contenedor">
+        <h2>Mis Proyectos</h2>
+        <div class="grid-proyectos">
+
+            <!-- Proyecto 1 -->
+            <div class="tarjeta-proyecto">
+               <h3>Alke Wallet - Billetera Digital</h3>
+                <p> Aplicación web interactiva para la gestión de activos financieros. Permite inicio de sesión,
+                 administración de saldo, depósitos, simulación de transferencias entre contactos e historial de movimientos </p>
+                <p class="tech">Technologies:HTML5 • CSS • JavaScript • Bootstrap </p>
+                <a href="https://github.com/tuusuario/proyecto1" target="_blank" class="btn-link">Ver Código en GitHub</a>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="tarjeta-proyecto">
+                <h3>Biblioteca Digital UNTEC</h3>
+                <p>Aplicación web dinámica en Java EE desarrollada bajo la arquitectura MVC para modernizar el sistema de consulta.
+                Incluye autenticación de usuarios con sesiones, vistas dinámicas con JSP/JSTL y
+                capa de datos con DAO y JDBC
+
+                </p>
+                <p class="tech">Technologies: Java EE • JSP • Servlets • MVC • DAO • JDBC • MySQL / H2 • Apache Tomcat</p>
+                <a href="https://github.com/catdenissec-hash/Biblioteca-Digital-UNTEC.git" target="_blank" class="btn-link">Ver Código en GitHub</a>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="tarjeta-proyecto">
+                <h3>SpringEduManager</h3>
+                <p>Es una aplicación web educativa diseñada para centralizar la gestión de cursos, prácticas y evaluaciones</p>
+                <p class="tech">Technologies: Spring Boot • Spring MVC • JPA • Spring Security • REST API</p>
+                <a href="https://github.com/catdenissec-hash/SpringEduManager.git" target="_blank" class="btn-link">Ver Código en GitHub</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. CONTACTO -->
+    <section id="contacto" class="contenedor">
+        <h2>Contacto</h2>
+        <p>¿Te interesa mi perfil o quieres conversar sobre alguna oportunidad?</p>
+        <div class="botones-contacto">
+            <a href="mailto:catdenissec@gmail.com" class="btn " Enviar Correo> 
+            <i class="fas fa-envelope"></i> Enviar Correo 
+            </a>
+            <a href="https://linkedin.com/in/tuperfil" target="_blank" class="btn"LinkedIn> 
+            <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/tuusuario" target="_blank" class="btn"GitHub> 
+            <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Catherine Castro - Diseñado y desarrollado en VSC</p>
+    </footer>
+
+</body>
+</html>

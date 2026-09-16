@@ -1,0 +1,356 @@
+
+/* ============================================================
+   PORTAFOLIO ELEGANTE Y VIBRANTE (Color &amp; Style Theme)
+   ============================================================ */
+
+/* Importación de tipografía moderna desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap');
+
+:root {
+    /* Fondos Profundos y Elegantes */
+    --fondo-principal: #0b0f19;        /* Azul noche muy oscuro */
+    --fondo-tarjeta: #131b2e;          /* Azul medio para tarjetas */
+    --fondo-tarjeta-hover: #1c2744;    /* Elevación en hover */
+    
+    /* Colores de Texto */
+    --texto-blanco: #f8fafc;
+    --texto-secundario: #94a3b8;
+    
+    /* Paleta Vibrante de Acentos */
+    --violeta: #8b5cf6;
+    --cian: #06b6d4;
+    --esmeralda: #10b981;
+    --rosa: #ec4899;
+    
+    /* Degradados Tricolores Vibrantes */
+    --gradiente-titulo: linear-gradient(135deg, #a855f7 0%, #06b6d4 50%, #10b981 100%);
+    --gradiente-boton: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #06b6d4 100%);
+    --gradiente-hover: linear-gradient(135deg, #9333ea 0%, #0284c7 100%);
+    
+    /* Bordes y Sombras con Luz Neón */
+    --borde-sutil: rgba(255, 255, 255, 0.08);
+    --borde-brillo: rgba(168, 85, 247, 0.4);
+    --sombra-glow: 0 10px 30px -5px rgba(139, 92, 246, 0.3);
+}
+
+/* Base Global */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--fondo-principal);
+    color: var(--texto-blanco);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   NAVEGADOR SUPERIOR (Efecto Cristal Traslúcido)
+   ============================================================ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background-color: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(16px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--borde-sutil);
+}
+
+nav .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: var(--gradiente-titulo);
+    -webkit-background-clip: text; 
+    background-clip: text; /* 💡 Añade esta línea justo aquí */
+    
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+    letter-spacing: -0.02em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+
+nav a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cian);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+}
+
+/* ============================================================
+   HERO / INICIO
+   ============================================================ */
+.hero {
+    text-align: center;
+    padding: 6rem 1.5rem 4rem;
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+.destacado {
+    background: var(--gradiente-titulo);
+   -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--texto-secundario);
+    margin-bottom: 2.5rem;
+}
+
+/* ============================================================
+   SECCIONES Y TÍTULOS CON ACENTO
+   ============================================================ */
+.contenedor {
+    max-width: 950px;
+    margin: auto;
+    padding: 4rem 1.5rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: var(--gradiente-titulo);
+    border-radius: 4px;
+    margin-top: 8px;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+}
+
+/* ============================================================
+   ETIQUETAS TÉCNICAS (SKILLS)
+   ============================================================ */
+.skills {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    margin-top: 1.8rem;
+}
+
+.skills li {
+    background: rgba(255, 255, 255, 0.04);
+    color: #e2e8f0;
+    padding: 0.6rem 1.3rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 1px solid var(--borde-sutil);
+    transition: all 0.3s ease;
+}
+
+.skills li:hover {
+    border-color: var(--cian);
+    color: var(--cian);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+}
+
+/* ============================================================
+   TARJETAS DE PROYECTOS (Con Estilo Neón)
+   ============================================================ */
+.grid-proyectos {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1.5rem;
+   margin-top: 2.5rem;
+}
+
+/* Respuesta automática para pantallas pequeñas o celulares */
+@media (max-width: 850px) {
+    .grid-proyectos { 
+        grid-template-columns: 1fr; /* Se apilan una sobre otra en celulares */
+    }
+}
+
+.tarjeta-proyecto {
+    background-color: var(--fondo-tarjeta);
+    padding: 1.3rem 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--borde-sutil);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea superior con gradiente en cada tarjeta */
+.tarjeta-proyecto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradiente-titulo);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    background-color: var(--fondo-tarjeta-hover);
+    border-color: var(--borde-brillo);
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-glow);
+}
+
+.tarjeta-proyecto:hover::before {
+    opacity: 1;
+}
+
+.tarjeta-proyecto h3 {
+    margin-top: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--texto-blanco);
+}
+
+.tarjeta-proyecto p {
+    color: var(--texto-secundario);
+    font-size: 0.90rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.tech {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--esmeralda);
+    margin-top: 0.3rem;
+    margin-bottom: 1.0rem;
+    letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   BOTONES Y LLAMADOS A LA ACCIÓN (CTA)
+   ============================================================ */
+.btn {
+    display: inline-block;
+    background: var(--gradiente-boton);
+    color: #ffffff;
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+.btn:hover {
+    background: var(--gradiente-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.5);
+}
+
+.btn-link {
+    display: inline-block;
+    color: var(--cian);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.btn-link:hover {
+    color: var(--rosa);
+    text-decoration: underline;
+}
+
+.botones-contacto .btn {
+    width: 160px;
+    text-align: center;
+    padding: 0.85rem 0;
+    display: inline-block;
+    box-sizing: border-box;
+    gap: 1.5rem;
+}
+    
+
+.foto-perfil {
+    width: 190px;          /* 📐 Aumentamos el tamaño (antes 140px) */
+    height: 190px;         /* Mismo valor para mantener el círculo */
+    border-radius: 50%;
+    border: 3px solid var(--cian);
+    box-shadow: 0 0 22px rgba(6, 182, 212, 0.45);
+    object-fit: cover;
+    
+    /* 🛠️ Ajuste para encuadrar la cabeza y dejar ver el blazer */
+    object-position: center 25%; 
+    
+    display: block;
+    margin: 2rem auto 1.5rem auto;
+}
+
+
+
+
+.hero {
+    padding: 3rem 1.5rem 2rem; /* Reduce el espacio arriba y abajo */
+}
+
+.hero h1 {
+    font-size: 2.2rem;          /* Reduce el tamaño de letra del título */
+}
+.biografia {
+text-align: justify; 
+font-size: 1.05rem;
+line-height: 1.8;
+color: var(--texto-secundario);
+font-family: 'Plus Jakarta Sans';
+letter-spacing: 0.01em;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    border-top: 1px solid var(--borde-sutil);
+    margin-top: 5rem;
+}
+
+
